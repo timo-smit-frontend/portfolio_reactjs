@@ -1,0 +1,59 @@
+header {
+  padding: 2vh;
+  height: 100vh;
+  text-align: center;
+  margin-bottom: 3rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../../assets/timosmit.jpg");
+  box-shadow: #23286b 0px -20rem 20rem -28px inset;
+}
+
+header nav {
+  height: 8vh;
+  position: fixed;
+}
+
+header nav img {
+  height: inherit;
+  cursor: pointer;
+}
+
+header section {
+  height: 96vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header section h1 {
+  margin: 0;
+  font-size: 3rem;
+  color: #ebe7ef;
+  filter: drop-shadow(0 2px 8px #22276a);
+}
+
+header section h1 span {
+  color: #f1b503;
+}
+
+.arrow {
+  display: block;
+  height: 2rem;
+  width: 2rem;
+  border-style: solid;
+  border-color: #ebe7ef;
+  border-width: 0 1px 1px 0;
+  background-color: transparent;
+  transform: rotate(45deg);
+  transition: border-width 150ms ease-in-out;
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+}
+
+.arrow:hover {
+  border-bottom-width: 3px;
+  border-right-width: 3px;
+  cursor: pointer;
+}
