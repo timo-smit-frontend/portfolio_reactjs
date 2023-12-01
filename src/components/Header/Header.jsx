@@ -21,12 +21,12 @@ const characterTrades = [
   "fashionable",
 ];
 
-function genRandomInt(max) {
-  return Math.floor(Math.random() * (max + 1));
+function genRandomInt() {
+  return Math.floor(Math.random() * characterTrades.length);
 }
 
 export default function Header() {
-  const randomTrade = characterTrades[genRandomInt(16)];
+  const randomTrade = characterTrades[genRandomInt()];
   return (
     <header id="header">
       <nav>
