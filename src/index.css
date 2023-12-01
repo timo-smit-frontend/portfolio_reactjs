@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap");
-@import "./components/variables.css";
+@import "./variables.css";
 
 * {
   font-family: "Quicksand", sans-serif;
@@ -12,6 +12,7 @@ html {
   color: var(--white);
   background: var(--blue);
   min-height: 80rem;
+  scroll-behavior: smooth;
 }
 
 main {

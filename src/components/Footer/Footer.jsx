@@ -1,12 +1,17 @@
 import Credits from "./Credits.jsx";
-import logoTS from "../../assets/ts_logo.png";
+import logoTS_2 from "../../assets/ts_logo_2.png";
+import scrollToElementWithId from "../../functions/utils";
 import "./Footer.css";
 
-export default function Footer() {
+export default function Footer({ click }) {
   return (
     <>
       <footer>
-        <img src={logoTS} alt=""></img>
+        <img
+          onClick={() => scrollToElementWithId("#header")}
+          src={logoTS_2}
+          alt=""
+        ></img>
         <ul className="contact">
           <li>
             <h3>Contact</h3>

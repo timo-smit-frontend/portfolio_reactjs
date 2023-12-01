@@ -1,4 +1,4 @@
-@import "../../components/variables.css";
+@import "../../variables.css";
 
 footer {
   width: 50vw;
@@ -16,6 +16,10 @@ footer .contact {
 
 footer ul {
   padding: 0;
+}
+
+footer img {
+  cursor: pointer;
 }
 
 .credits {

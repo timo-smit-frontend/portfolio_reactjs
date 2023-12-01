@@ -1,6 +1,6 @@
-import { MAIN_LIST_ITEMS } from "../../data.jsx";
+import { MAIN_LIST_ITEMS } from "../../../data.jsx";
 import MainListItem from "./MainListItem/MainListItem.jsx";
-import Section from "../Section.jsx";
+import Section from "../../Section.jsx";
 
 export default function MainList() {
   return (

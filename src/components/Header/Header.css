@@ -1,4 +1,4 @@
-@import "../../components/variables.css";
+@import "../../variables.css";
 
 header {
   padding: 2vh;
@@ -13,12 +13,11 @@ header {
 
 header nav {
   height: 8vh;
-  position: fixed;
+  position: absolute;
 }
 
 header nav img {
   height: inherit;
-  cursor: pointer;
 }
 
 header section {

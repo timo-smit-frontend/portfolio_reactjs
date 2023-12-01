@@ -1,4 +1,4 @@
-@import "../../components/variables.css";
+@import "/src/variables.css";
 
 #main-list ul {
   padding: 0;
