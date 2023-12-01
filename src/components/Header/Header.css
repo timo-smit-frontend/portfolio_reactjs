@@ -1,3 +1,5 @@
+@import "../../components/variables.css";
+
 header {
   padding: 2vh;
   height: 100vh;
@@ -6,7 +8,7 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("../../assets/timosmit.jpg");
-  box-shadow: #23286b 0px -20rem 20rem -28px inset;
+  box-shadow: var(--blue) 0px -20rem 20rem -28px inset;
 }
 
 header nav {
@@ -29,12 +31,8 @@ header section {
 header section h1 {
   margin: 0;
   font-size: 3rem;
-  color: #ebe7ef;
-  filter: drop-shadow(0 2px 8px #22276a);
-}
-
-header section h1 span {
-  color: #f1b503;
+  color: var(--white);
+  filter: drop-shadow(0 2px 8px var(--blue));
 }
 
 .arrow {
@@ -42,7 +40,7 @@ header section h1 span {
   height: 2rem;
   width: 2rem;
   border-style: solid;
-  border-color: #ebe7ef;
+  border-color: var(--white);
   border-width: 0 1px 1px 0;
   background-color: transparent;
   transform: rotate(45deg);
