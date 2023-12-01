@@ -50,7 +50,8 @@ export const EDUCATIONAL_PROJECTS = {
   },
   pokemonEevee: {
     title: "Interface interaction",
-    description: "How do you evolve the pokemon Eevee?",
+    description:
+      'For the subject Interface interaction I got asked the question:"How do you evolve the pokemon Eevee?". To answer the question I created an interactive interface looking like a Nintendo DS. The user can learn how Eevee evolves by making decisions. The interface is made with HTML, CSS and JS. ',
     image: pokemonEevee,
     link: "https://timo500810897.github.io/interface-interaction/",
     created: "created May 2022",
@@ -58,14 +59,15 @@ export const EDUCATIONAL_PROJECTS = {
   accessibility: {
     title: "Accessibility",
     description:
-      "Making visuals for a video to enhance it for a deaf audience.",
+      "Making visuals for a video to enhance it for a deaf audience. With only reading the subtitles you barely have a clue what the scene is about. This is why I accepted the challenge to create visualizations to help the user understand what is going on. This is a fragment of the movie Blade Runner 2049.",
     image: accessibility,
     link: "https://timo500810897.github.io/web-typography-21-22/closed-captions/index.html",
     created: "created April 2022",
   },
   twitchTv: {
     title: "Responsiveness",
-    description: "My first try at making a website responsive.",
+    description:
+      "This is my first try at making a website responsive. At the time I watched a lot of livestreams on Twitch.tv. This is why I decited to recreate the website on my own. This started my passion for Front-end by finding out how much I like this way of puzzling way of creating anything you want.",
     image: twitchTv,
     link: "https://timo500810897.github.io/blokweb/",
     created: "created October 2020",
