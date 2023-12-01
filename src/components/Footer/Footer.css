@@ -31,6 +31,16 @@ footer img {
   background-color: var(--dark-blue);
 }
 
-.credits > * {
-  width: 25vw;
+@media screen and (max-width: 1400px) {
+  footer {
+    width: 70vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  footer {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
 }

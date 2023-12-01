@@ -1,5 +1,3 @@
-import "../MainList.css";
-
 export default function MainList({ description, title, image, link }) {
   return (
     <li>
