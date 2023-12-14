@@ -1,11 +1,11 @@
-import recruiteit from "./assets/recruiteit.png";
-import accentInteractive from "./assets/accentinteractive.jpg";
-import smartHotel from "./assets/smarthotel.png";
+import recruiteit from "./assets/recruiteit.webp";
+import accentInteractive from "./assets/accentinteractive.webp";
+import smartHotel from "./assets/smarthotel.webp";
 
-import learningReact from "./assets/educational_projects/learning_react.png";
-import pokemonEevee from "./assets/educational_projects/interface_interaction.png";
-import twitchTv from "./assets/educational_projects/twitch.png";
-import accessibility from "./assets/educational_projects/accessibility.png";
+import learningReact from "./assets/educational_projects/learning_react.webp";
+import pokemonEevee from "./assets/educational_projects/interface_interaction.webp";
+import twitchTv from "./assets/educational_projects/twitch.webp";
+import accessibility from "./assets/educational_projects/accessibility.webp";
 
 export const MAIN_LIST_ITEMS = [
   {
@@ -45,7 +45,7 @@ export const EDUCATIONAL_PROJECTS = {
       </>
     ),
     image: learningReact,
-    link: "",
+    link: "https://www.timosmit.dev",
     created: "created November 2023",
   },
   pokemonEevee: {

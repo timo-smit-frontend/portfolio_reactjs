@@ -7,7 +7,7 @@ header {
   margin-bottom: 3rem;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../../assets/timosmit.jpg");
+  background-image: url("../../assets/timosmit.webp");
   box-shadow: var(--blue) 0px -20rem 20rem -28px inset;
 }
 

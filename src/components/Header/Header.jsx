@@ -41,6 +41,7 @@ export default function Header() {
       <button
         onClick={() => scrollToElementWithId("#main")}
         className="arrow"
+        aria-label="Skip to main content"
       ></button>
     </header>
   );

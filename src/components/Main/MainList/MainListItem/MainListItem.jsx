@@ -2,7 +2,7 @@ export default function MainList({ description, title, image, link }) {
   return (
     <li>
       <a href={link} target="_blank">
-        <img src={image} alt={title} />
+        <img src={image} alt="" />
         <div>
           <h3>{title}</h3>
           <p>{description}</p>
