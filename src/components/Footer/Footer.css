@@ -1,12 +1,13 @@
 @import "../../variables.css";
 
 footer {
-  width: 50vw;
+  width: 100vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 3rem auto 0 auto;
-  padding: 2rem;
+  margin-top: 3rem;
+  padding: 2rem calc(25vw + 2rem);
   gap: 1rem;
+  background-color: var(--dark-blue);
 }
 
 footer .contact {
@@ -21,21 +22,32 @@ footer ul {
 
 footer img {
   cursor: pointer;
+  width: 100px;
+  height: 100px;
 }
 
-.credits {
-  margin-top: 3rem;
-  padding: 1rem;
+footer .credits,
+footer .socials {
   display: flex;
-  justify-content: center;
-  background-color: var(--dark-blue);
+  gap: 3rem;
+  margin-top: 2rem;
 }
 
-@media screen and (max-width: 1400px) {
+.socials a {
+  display: flex;
+}
+
+.socials svg {
+  width: auto;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+/* @media screen and (max-width: 1400px) {
   footer {
     width: 70vw;
   }
-}
+} */
 
 @media screen and (max-width: 800px) {
   footer {

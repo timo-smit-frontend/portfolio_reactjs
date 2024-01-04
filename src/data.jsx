@@ -1,6 +1,7 @@
-import recruiteit from "./assets/recruiteit.webp";
+import recruiteit from "./assets/recruiteit.jpg";
 import accentInteractive from "./assets/accentinteractive.webp";
 import smartHotel from "./assets/smarthotel.webp";
+import wfp from "./assets/wfp_enhance.jpg";
 
 import learningReact from "./assets/educational_projects/learning_react.webp";
 import pokemonEevee from "./assets/educational_projects/interface_interaction.webp";
@@ -8,6 +9,13 @@ import twitchTv from "./assets/educational_projects/twitch.webp";
 import accessibility from "./assets/educational_projects/accessibility.webp";
 
 export const MAIN_LIST_ITEMS = [
+  {
+    image: wfp,
+    title: "Project Enhance",
+    description:
+      "While working at Capgemini, I had the opportunity to collaborate with the United Nations World Food Programme on Project Enhance. This sophisticated initiative addresses dietary considerations, offering a versatile tool to calculate and model dietary patterns. The goal is to enhance nutrition, affordability, and sustainability based on individual needs and local preferences.",
+    link: "https://enhancedietsanalytics.wfp.org/",
+  },
   {
     image: recruiteit,
     title: "RecruiteIT",

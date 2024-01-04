@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { EDUCATIONAL_PROJECTS } from "../../data.jsx";
+import { EDUCATIONAL_PROJECTS } from "../../../data.jsx";
 import TabButton from "./TabButton/TabButton.jsx";
-import Section from "../Section.jsx";
-import Tabs from "../Tabs.jsx";
+import Section from "../../Section.jsx";
+import Tabs from "../../Tabs.jsx";
 
 export default function Educational() {
   const [clickedTopic, setClickedTopic] = useState("portfolioReact");
@@ -30,7 +30,7 @@ export default function Educational() {
         </div>
         <img
           src={EDUCATIONAL_PROJECTS[clickedTopic].image}
-          alt={EDUCATIONAL_PROJECTS[clickedTopic].title}
+          alt={EDUCATIONAL_PROJECTS[clickedTopic].title + " Timo Smit"}
         />
       </div>
     );
