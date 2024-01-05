@@ -8,27 +8,30 @@ export default function Footer() {
   return (
     <>
       <footer>
-        <img
-          onClick={() => scrollToElementWithId("#header")}
-          src={logoTS_2}
-          alt="Timo Smit"
-        ></img>
-        <ul className="contact">
-          <li>
-            <h3>Contact</h3>
-          </li>
-          <li>
-            <a href="mailto:timo.smit@live.nl">timo.smit@live.nl</a>
-          </li>
-          <li>
-            <a href="tel:+31610792320">+31 6 10 79 23 20</a>
-          </li>
-          <li>
-            <a href="https://timo-smit.webflow.io/">My Design Portfolio</a>
-          </li>
-        </ul>
-        <Socials />
-        <Credits />
+        <div className="content-footer">
+          <img
+            onClick={() => scrollToElementWithId("#header")}
+            src={logoTS_2}
+            alt="Timo Smit"
+            title="Scroll up!"
+          ></img>
+          <ul className="contact">
+            <li>
+              <h3>Contact</h3>
+            </li>
+            <li>
+              <a href="mailto:timo.smit@live.nl">timo.smit@live.nl</a>
+            </li>
+            <li>
+              <a href="tel:+31610792320">+31 6 10 79 23 20</a>
+            </li>
+            <li>
+              <a href="https://timo-smit.webflow.io/">My design portfolio</a>
+            </li>
+          </ul>
+          <Socials />
+          <Credits />
+        </div>
       </footer>
     </>
   );

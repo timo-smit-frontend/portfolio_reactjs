@@ -1,12 +1,12 @@
 import recruiteit from "./assets/recruiteit.jpg";
-import accentInteractive from "./assets/accentinteractive.webp";
-import smartHotel from "./assets/smarthotel.webp";
-import wfp from "./assets/wfp_enhance.jpg";
+import accentInteractive from "./assets/accentinteractive.jpg";
+import smartHotel from "./assets/smarthotel.jpg";
+import wfp from "./assets/wfp.jpg";
 
-import learningReact from "./assets/educational_projects/learning_react.webp";
-import pokemonEevee from "./assets/educational_projects/interface_interaction.webp";
-import twitchTv from "./assets/educational_projects/twitch.webp";
-import accessibility from "./assets/educational_projects/accessibility.webp";
+import learningReact from "./assets/educational_projects/learning_react.jpg";
+import pokemonEevee from "./assets/educational_projects/interface_interaction.jpg";
+import twitchTv from "./assets/educational_projects/twitch.jpg";
+import accessibility from "./assets/educational_projects/accessibility.jpg";
 
 export const MAIN_LIST_ITEMS = [
   {

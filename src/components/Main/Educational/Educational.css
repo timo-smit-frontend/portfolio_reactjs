@@ -19,7 +19,7 @@
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 6px;
-  background-color: transparent;
+  background-color: var(--dark-blue);
   color: var(--white);
   font-family: "Roboto Condensed", sans-serif;
   font-size: 1rem;
@@ -28,8 +28,8 @@
 }
 
 #educational menu button:hover {
-  background-color: var(--dark-blue);
-  color: var(--white);
+  background-color: var(--dark-yellow);
+  color: var(--black);
 }
 
 #educational menu button.active {
@@ -87,4 +87,8 @@
   padding-bottom: 0.3rem;
   border-bottom: 1px solid var(--yellow);
   margin-top: 1rem;
+}
+
+#tab-content a[type="button"]:hover {
+  color: var(--yellow);
 }

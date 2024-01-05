@@ -30,6 +30,10 @@ main h2 {
   box-shadow: 0 2px 8px var(--shadow);
 }
 
+#main-list li:hover {
+  transform: translatey(-2%);
+}
+
 #main-list li img {
   width: 100%;
   height: 100%;
@@ -51,6 +55,7 @@ main h2 {
 
 #main-list li h3 {
   margin: 0.5rem 0;
+  color: #f1b503;
 }
 
 #main-list li p {
@@ -73,24 +78,36 @@ main h2 {
 }
 
 @media screen and (max-width: 800px) {
-  main {
-    width: 70vw;
+  main h2 {
+    text-align: left;
   }
 
   #main-list ul {
     grid-template-columns: 1fr;
   }
 
+  #educational {
+    position: relative;
+  }
+
   #educational menu {
-    flex-wrap: wrap;
+    bottom: 0;
+    left: 50%;
+    position: absolute;
+    margin: 0 0 1rem 0;
+    transform: translateX(-50%);
   }
 
   #educational menu button {
-    padding: 0.2rem 0.5rem;
-    font-size: 0.8rem;
+    font-size: 0;
+    padding: 0.4rem;
+    color: transparent;
+    border-radius: 50%;
+    background-color: var(--white);
   }
 
   #educational #tab-content {
     grid-template-columns: 1fr;
+    padding: 2rem 2rem 3rem 2rem;
   }
 }

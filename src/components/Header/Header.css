@@ -42,7 +42,7 @@ header section h1 {
   border-color: var(--white);
   border-width: 0 1px 1px 0;
   background-color: transparent;
-  transform: rotate(45deg);
+  transform: translateX(-50%) rotate(45deg);
   transition: border-width 150ms ease-in-out;
   position: absolute;
   bottom: 5rem;

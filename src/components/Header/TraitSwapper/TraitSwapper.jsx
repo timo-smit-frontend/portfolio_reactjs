@@ -37,14 +37,28 @@ const characterTraits = [
   "dynamic",
   "sympathetic",
 ];
-
-export default function TraitSwapper() {
+const TraitSwapper = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [currentTrait, setCurrentTrait] = useState(characterTraits[0]);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [randomTrait, setRandomTrait] = useState("");
 
   useEffect(() => {
-    // Update current trait and reset character index
+    function handleResize() {
+      setIsSmallScreen(window.innerWidth < 800);
+    }
+
+    handleResize(); // Set initial screen size
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
     const updateTrait = () => {
       const nextIndex =
         currentIndex === characterTraits.length - 1 ? 0 : currentIndex + 1;
@@ -57,13 +71,30 @@ export default function TraitSwapper() {
     if (charIndex < currentTrait.length) {
       const timeoutId = setTimeout(() => {
         setCharIndex(charIndex + 1);
-      }, 100); // speed of typing each character
+      }, 200); // speed of typing each character
       return () => clearTimeout(timeoutId);
     } else {
-      const intervalId = setInterval(updateTrait, 2000); // delay before switching to next word
+      const intervalId = setInterval(updateTrait, 3000); // delay before switching to next word
       return () => clearInterval(intervalId);
     }
   }, [currentIndex, charIndex, currentTrait]);
 
-  return <span id="trait-styling">{currentTrait.substring(0, charIndex)}</span>;
-}
+  useEffect(() => {
+    if (isSmallScreen) {
+      const randomIndex = Math.floor(Math.random() * characterTraits.length);
+      setRandomTrait(characterTraits[randomIndex]);
+    }
+  }, [isSmallScreen]);
+
+  const traitToDisplay = isSmallScreen
+    ? randomTrait || "" // Display an empty string if randomTrait is not set
+    : currentTrait.substring(0, charIndex);
+
+  const displayedTrait = isSmallScreen
+    ? traitToDisplay
+    : traitToDisplay + (charIndex < currentTrait.length ? "_" : "");
+
+  return <span id="trait-styling">{displayedTrait}</span>;
+};
+
+export default TraitSwapper;

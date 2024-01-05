@@ -2,17 +2,24 @@
 @import "./variables.css";
 
 * {
-  font-family: "Quicksand", sans-serif;
-  box-sizing: border-box;
   margin: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  transition-duration: 0.3s;
 }
 
 html {
   line-height: 1.5;
-  color: var(--white);
   background: var(--blue);
   min-height: 80rem;
   scroll-behavior: smooth;
+}
+
+p,
+h1,
+h2,
+h3 {
+  color: var(--white);
 }
 
 span {
@@ -49,4 +56,10 @@ a:hover {
 
 li {
   list-style-type: none;
+}
+
+@media screen and (max-width: 800px) {
+  a:hover {
+    color: inherit;
+  }
 }
