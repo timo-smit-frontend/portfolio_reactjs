@@ -41,6 +41,7 @@ const TraitSwapper = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [currentTrait, setCurrentTrait] = useState(characterTraits[0]);
+  const [isErasing, setIsErasing] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [randomTrait, setRandomTrait] = useState("");
 
@@ -49,8 +50,7 @@ const TraitSwapper = () => {
       setIsSmallScreen(window.innerWidth < 800);
     }
 
-    handleResize(); // Set initial screen size
-
+    handleResize();
     window.addEventListener("resize", handleResize);
 
     return () => {
@@ -59,25 +59,34 @@ const TraitSwapper = () => {
   }, []);
 
   useEffect(() => {
-    const updateTrait = () => {
+    let timeoutId;
+
+    if (!isErasing && charIndex < currentTrait.length) {
+      // Typing phase
+      timeoutId = setTimeout(() => {
+        setCharIndex(charIndex + 1);
+      }, 300);
+    } else if (isErasing && charIndex > 0) {
+      // Erasing phase
+      timeoutId = setTimeout(() => {
+        setCharIndex(charIndex - 1);
+      }, 75);
+    } else if (!isErasing && charIndex >= currentTrait.length) {
+      // Start erasing after a delay
+      timeoutId = setTimeout(() => {
+        setIsErasing(true);
+      }, 3000);
+    } else {
+      // Switch to next word after erasing
+      setIsErasing(false);
       const nextIndex =
         currentIndex === characterTraits.length - 1 ? 0 : currentIndex + 1;
       setCurrentIndex(nextIndex);
       setCurrentTrait(characterTraits[nextIndex]);
-      setCharIndex(0);
-    };
-
-    // Typing effect for characters
-    if (charIndex < currentTrait.length) {
-      const timeoutId = setTimeout(() => {
-        setCharIndex(charIndex + 1);
-      }, 200); // speed of typing each character
-      return () => clearTimeout(timeoutId);
-    } else {
-      const intervalId = setInterval(updateTrait, 3000); // delay before switching to next word
-      return () => clearInterval(intervalId);
     }
-  }, [currentIndex, charIndex, currentTrait]);
+
+    return () => clearTimeout(timeoutId);
+  }, [currentIndex, charIndex, currentTrait, isErasing]);
 
   useEffect(() => {
     if (isSmallScreen) {
@@ -87,12 +96,11 @@ const TraitSwapper = () => {
   }, [isSmallScreen]);
 
   const traitToDisplay = isSmallScreen
-    ? randomTrait || "" // Display an empty string if randomTrait is not set
+    ? randomTrait || ""
     : currentTrait.substring(0, charIndex);
 
-  const displayedTrait = isSmallScreen
-    ? traitToDisplay
-    : traitToDisplay + (charIndex < currentTrait.length ? "_" : "");
+  // Always append the underscore
+  const displayedTrait = traitToDisplay + "_";
 
   return <span id="trait-styling">{displayedTrait}</span>;
 };
