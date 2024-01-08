@@ -56,7 +56,10 @@ footer {
 
 @media screen and (max-width: 800px) {
   .content-footer {
+    width: 90vw;
     text-align: center;
+    justify-items: center;
+    grid-template-columns: 1fr;
   }
 
   .content-footer .contact a {

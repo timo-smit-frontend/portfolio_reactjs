@@ -78,6 +78,10 @@ main h2 {
 }
 
 @media screen and (max-width: 800px) {
+  main {
+    width: 90vw;
+  }
+
   main h2 {
     text-align: left;
   }

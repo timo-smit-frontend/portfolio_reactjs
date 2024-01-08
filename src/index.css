@@ -57,9 +57,3 @@ a:hover {
 li {
   list-style-type: none;
 }
-
-@media screen and (max-width: 800px) {
-  a:hover {
-    color: inherit;
-  }
-}
