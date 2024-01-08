@@ -97,10 +97,10 @@ const TraitSwapper = () => {
 
   const traitToDisplay = isSmallScreen
     ? randomTrait || ""
-    : currentTrait.substring(0, charIndex);
+    : currentTrait.substring(0, charIndex) + "_";
 
   // Always append the underscore
-  const displayedTrait = traitToDisplay + "_";
+  const displayedTrait = traitToDisplay;
 
   return <span id="trait-styling">{displayedTrait}</span>;
 };
