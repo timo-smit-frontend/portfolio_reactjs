@@ -1,59 +1,61 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap");
-@import "./variables.css";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap');
+
+:root {
+  --black: #000000;
+  --blue: #23286b;
+  --dark-blue: #121435;
+  --white: #ebe7ef;
+  --dark-white: #d6dee1;
+  --darkest-white: #a8bbbf;
+  --yellow: #f1b503;
+  --dark-yellow: #f1b503d9;
+  --shadow: #0000004d;
+}
+
+@import 'tailwindcss';
 
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: "Quicksand", sans-serif;
-  transition-duration: 0.3s;
+  font-family: 'Quicksand', sans-serif;
 }
 
 html {
-  line-height: 1.5;
-  background: var(--blue);
-  min-height: 80rem;
-  scroll-behavior: smooth;
+  @apply scroll-smooth;
+}
+
+body {
+  @apply antialiased bg-[var(--blue)];
 }
 
 p,
 h1,
 h2,
 h3 {
-  color: var(--white);
+  @apply text-[var(--white)];
 }
 
-span {
-  color: var(--yellow);
-}
-
-::-webkit-scrollbar {
-  width: 20px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--dark-white);
-  border-radius: 20px;
-  border: 6px solid transparent;
-  background-clip: content-box;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: var(--darkest-white);
+h1 span,
+h2 span {
+  @apply text-[var(--yellow)];
 }
 
 a {
-  text-decoration: none;
-  color: var(--white);
+  @apply text-[var(--yellow)];
 }
 
 a:hover {
-  color: var(--yellow);
+  @apply text-[var(--dark-yellow)];
 }
 
 li {
-  list-style-type: none;
+  @apply list-none;
+}
+
+#header {
+  box-shadow: var(--blue) 0 -20rem 20rem -28px inset;
+}
+
+.section {
+  @apply lg:my-20 sm:my-16 my-8;
 }
